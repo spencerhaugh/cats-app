@@ -6,6 +6,7 @@ const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
 const app = express ();
 const db = mongoose.connection;
+const Catabase = require('./models/catabase.js');
 //===================
 //Port
 //===================
@@ -16,7 +17,7 @@ const PORT = process.env.PORT || 3000;
 //Database
 //===================
 // How to connect to the database either via heroku or locally
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/'+ `project_two`;
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/'+ `catabase`;
 
 // Connect to Mongo
 mongoose.connect(MONGODB_URI ,  { useNewUrlParser: true}, { useUnifiedTopology: true }, { useFindAndModify: false });
@@ -54,6 +55,13 @@ app.get('/catabase/new', (req, res) => {
     // res.send('This will create a new item, eventually.');
     res.render('new.ejs');
 });
+
+// test model route
+app.get('/testpage', async (req, res) => {
+    const newTestCat = new Catabase({ name: 'Smokey'});
+    await newTestCat.save();
+    res.send(newTestCat);
+})
 
 //show
 app.get('/catabase/:id', (req, res) => {
