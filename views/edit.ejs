@@ -6,20 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>NEW CAT</h1>
+    <h1>EDIT CAT HERE!</h1>
 
-    <form action="/catabse" method="POST">
+    <form action="/catabse/<%=cat._id%>?_method=PUT" method="POST">
         <label for="name">NAME:</label>
-            <input type="text" name="name">
+            <input type="text" name="name" value="<%=cat.name%>">
         <label for="description">DESCRIPTION:</label>
-            <input type="textarea" name="description">
+            <input type="textarea" name="description" value="<%=cat.description%>">
         <label for="img">IMAGE URL:</label>
-            <input type="text" name="img">
+            <input type="text" name="img" value="<%=cat.img%>">
         <input type="button" value="SUBMIT">
     </form>
 
-    <a href="/catabase">
-        <button>Back To Index</button>
-    </a>
+    <a href="/catabase/<%=cat._id%>"><button>BACK</button></a>
 </body>
 </html>

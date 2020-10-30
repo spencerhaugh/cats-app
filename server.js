@@ -47,8 +47,13 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //===================
 //localhost:3000
 app.get('/catabase' , (req, res) => {
-  res.render('index.ejs');
-});
+    Catabase.find({}, (err, allCats) => {
+        res.render('index.ejs', { 
+            catabase: allCats 
+        });
+    }
+)}
+);
 
 //new
 app.get('/catabase/new', (req, res) => {
@@ -56,26 +61,29 @@ app.get('/catabase/new', (req, res) => {
     res.render('new.ejs');
 });
 
-// test model route
-app.get('/testpage', async (req, res) => {
-    const newTestCat = new Catabase({ name: 'Smokey'});
-    await newTestCat.save();
-    res.send(newTestCat);
-})
-
 //show
-app.get('/catabase/:id', (req, res) => {
-    res.send('This will be the show page');
+app.get('/catabase/:id', async (req, res) => {
+    // res.send('This will be the show page');
+    Catabase.findById(req.params.id, (err, foundCat) => {
+        res.render('show.ejs', {
+            cat: foundCat
+        })
+    })
 });
 
 //update(edit)
 app.get('/catabase/:id/edit', (req, res) => {
-    res.send('This is where the edit form will be');
+    // res.send('This is where the edit form will be');
+    Catabase.findById(req.params.id, (err, foundCat) => {
+        res.render('edit.ejs', {
+            cat: foundCat
+        })
+    })
 });
 
-app.post('/catabase/:id/edit', (req, res) => {
+// app.post('/catabase/:id/edit', (req, res) => {
 
-})
+// })
 
 
 

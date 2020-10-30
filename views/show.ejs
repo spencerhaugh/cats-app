@@ -7,17 +7,20 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>CATABASE!</h1>
-    <% for (let cat of catabase) { %> 
+    <h1>CATABASE!</h1> 
         <div class=cat>
-            <a href="/catabase/<%=cat._id%>">
-                <img src="<%=cat.img %>" alt="Cat picture" width=200px>
-            </a>
+            <img src="<%=cat.img %>" alt="Cat picture" width="600px">
             <h3><%=cat.name%></h3>
+            <p><%=cat.description%></p>
         </div>
-    <% } %>
-    <a href="/catabase/new">
-        <button>ADD NEW</button>
+    
+    <a href="/catabase/<%=cat._id%>/edit">
+        <button>EDIT CAT</button>
     </a>
+
+    <a href="/catabase">
+        <button>Back To Index</button>
+    </a>
+
 </body>
 </html>
