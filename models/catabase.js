@@ -2,9 +2,25 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const catabaseSchema = new Schema({
-    name: String,
-    description: String,
-    img: String,
+    name: {
+        type: String,
+        required: true
+    },
+    description: {
+        type: String,
+        required: true
+    },
+    img: {
+        type: String,
+    },
+    stars: {
+        type: Number,
+        default: 3
+    },
+    likes: {
+        type: Number,
+        default: 0
+    }
 });
 
 const Catabase = mongoose.model('Catabase', catabaseSchema);

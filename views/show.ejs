@@ -1,26 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('./partials/header.ejs') %> 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <%- include('./partials/head.ejs') %> 
 </head>
 <body>
     <h1>CATABASE!</h1> 
-        <div class=cat>
+    <div class='showContainer'>
+        <div class=showCat>
             <img src="<%=cat.img %>" alt="Cat picture" width="600px">
             <h3><%=cat.name%></h3>
             <p><%=cat.description%></p>
         </div>
-    
-    <a href="/catabase/<%=cat._id%>/edit">
-        <button>EDIT CAT</button>
-    </a>
+    </div>
+    <div class='buttons'>
+        <a href="/catabase/<%=cat._id%>/edit">
+            <button>EDIT THIS CAT</button>
+        </a>
+        <form action="/catabase/<%=cat._id%>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE THIS CAT">
+        </form>
 
-    <a href="/catabase">
-        <button>Back To Index</button>
-    </a>
-
+        <a href="/catabase">
+            <button>Back To Index</button>
+        </a>
+    </div>
+    <%- include('./partials/footer.ejs') %> 
 </body>
 </html>

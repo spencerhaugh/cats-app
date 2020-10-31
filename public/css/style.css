@@ -1,3 +1,28 @@
 body {
     background-color: aquamarine;
 }
+.container {
+    width: 80%;
+    display: flex;
+}
+.cat {
+    background-color: bisque;
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 25px;
+}
+.cat img {
+    border-radius: 25px;
+}
+.showContainer {
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    width: 60%;
+}
+.showCat {
+    background-color: bisque;
+    margin: 5px;
+    padding: 40px 10px;
+}

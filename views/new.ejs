@@ -1,25 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('./partials/header.ejs') %> 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include('./partials/head.ejs') %> 
 </head>
 <body>
     <h1>NEW CAT</h1>
 
-    <form action="/catabse" method="POST">
+    <form action="/catabase" method="POST">
         <label for="name">NAME:</label>
             <input type="text" name="name">
         <label for="description">DESCRIPTION:</label>
             <input type="textarea" name="description">
+        <label for="stars">Star Rating:</label>
+            <input type="range" name="stars" id="" min="1" max="5">
         <label for="img">IMAGE URL:</label>
             <input type="text" name="img">
-        <input type="button" value="SUBMIT">
+        <input type="submit" value="submit">
     </form>
 
     <a href="/catabase">
         <button>Back To Index</button>
     </a>
+    <%- include('./partials/footer.ejs') %> 
 </body>
 </html>

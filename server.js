@@ -45,21 +45,53 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //===================
 // Routes
 //===================
-//localhost:3000
-app.get('/catabase' , (req, res) => {
-    Catabase.find({}, (err, allCats) => {
-        res.render('index.ejs', { 
-            catabase: allCats 
-        });
-    }
-)}
-);
+
 
 //new
 app.get('/catabase/new', (req, res) => {
     // res.send('This will create a new item, eventually.');
     res.render('new.ejs');
 });
+
+
+//update/edit link (to edit page)
+app.get('/catabase/:id/edit', (req, res) => {
+    // res.send('This is where the edit form will be');
+    Catabase.findById(req.params.id, (err, foundCat) => {
+        res.render('edit.ejs', {
+            cat: foundCat
+        })
+    })
+});
+//update/edit form (put route)
+app.put('/catabase/:id', (req, res) => {
+    Catabase.findByIdAndUpdate(
+        req.params.id, 
+        req.body, 
+        {new: true}, 
+        (err, updatedCat) => {
+            res.redirect('/catabase')
+        })
+})
+
+//Create (new post route)
+app.post('/catabase', (req, res) => {
+    console.log('clicked post')
+    Catabase.create(req.body, (err, createCat) => {
+        res.redirect('/catabase')
+        console.log('posted post')
+        console.log(req.body)
+    })
+})
+
+//delete
+app.delete('/catabase/:id', async (req, res) => {
+    console.log('Delete attempt')
+    await Catabase.findByIdAndRemove(req.params.id, (err, deletedCat) => {
+        console.log('Delete success')
+        res.redirect('/catabase')
+    })
+})
 
 //show
 app.get('/catabase/:id', async (req, res) => {
@@ -71,21 +103,15 @@ app.get('/catabase/:id', async (req, res) => {
     })
 });
 
-//update(edit)
-app.get('/catabase/:id/edit', (req, res) => {
-    // res.send('This is where the edit form will be');
-    Catabase.findById(req.params.id, (err, foundCat) => {
-        res.render('edit.ejs', {
-            cat: foundCat
-        })
-    })
-});
-
-// app.post('/catabase/:id/edit', (req, res) => {
-
-// })
-
-
+//index
+app.get('/catabase' , (req, res) => {
+    Catabase.find({}, (err, allCats) => {
+        res.render('index.ejs', { 
+            catabase: allCats 
+        });
+    }
+)}
+);
 
 //===================
 //Listener

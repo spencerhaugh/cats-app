@@ -1,23 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('./partials/header.ejs') %> 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <%- include('./partials/head.ejs') %> 
 </head>
 <body>
     <h1>CATABASE!</h1>
-    <% for (let cat of catabase) { %> 
-        <div class=cat>
-            <a href="/catabase/<%=cat._id%>">
-                <img src="<%=cat.img %>" alt="Cat picture" width=200px>
-            </a>
-            <h3><%=cat.name%></h3>
-        </div>
-    <% } %>
+    <h2>The Online Cat Ranking System</h2>
+    <div class='container'>
+        <% for (let cat of catabase) { %> 
+            <div class=cat>
+                <a href="/catabase/<%=cat._id%>">
+                    <img src="<%=cat.img %>" alt="Cat picture" width=200px>
+                </a>
+                <h3><%=cat.name%></h3>
+            </div>
+        <% } %>
+    </div>
     <a href="/catabase/new">
-        <button>ADD NEW</button>
+        <button>ADD A CAT</button>
     </a>
 </body>
 </html>
