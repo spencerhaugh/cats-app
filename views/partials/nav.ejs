@@ -13,7 +13,7 @@
     </div>
     <% if (currentUser) { %>
         <div class='users logout'>
-            <form action="/sessions/?_method=DELETE" method="POST">
+            <form action="/sessions?_method=DELETE" method="POST">
                 <button class="logout navBtn">LOG OUT</button>
             </form>
         </div>

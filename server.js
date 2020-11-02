@@ -56,6 +56,9 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Controllers
 //===================
 
+//Cats
+const catsController
+
 //Users
 const userController = require('./controllers/users_controller.js');
 app.use('/users', userController);

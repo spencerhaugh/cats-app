@@ -3,15 +3,17 @@
     <%- include('../partials/head.ejs') %> 
 </head>
 <body>
+    <%- include('../partials/nav.ejs') %>
     <h1>NEW USER</h1>
-
-    <form action="/users" method="POST">
-        <label for="username">USERNAME:</label>
-            <input type="text" name="username">
-        <label for="password">PASSWORD:</label>
-            <input type="password" name="password">
-        <input type="submit" value="Create">
-    </form>
+    <div class='container'>
+        <form action="/users" method="POST">
+            <label for="username">USERNAME:</label>
+                <input type="text" name="username">
+            <label for="password">PASSWORD:</label>
+                <input type="password" name="password">
+            <input type="submit" value="Create">
+        </form>
+    </div>
 
     <a href="/catabase">
         <button>Back To Index</button>
