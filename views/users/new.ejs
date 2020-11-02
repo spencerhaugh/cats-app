@@ -1,0 +1,21 @@
+<%- include('./partials/header.ejs') %> 
+<head>
+    <%- include('./partials/head.ejs') %> 
+</head>
+<body>
+    <h1>NEW USER</h1>
+
+    <form action="/users" method="POST">
+        <label for="name">USERNAME:</label>
+            <input type="text" name="name">
+        <label for="password">PASSWORD:</label>
+            <input type="password" name="password">
+        <input type="submit" value="Create">
+    </form>
+
+    <a href="/catabase">
+        <button>Back To Index</button>
+    </a>
+    <%- include('./partials/footer.ejs') %> 
+</body>
+</html>

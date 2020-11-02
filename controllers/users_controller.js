@@ -1,13 +1,15 @@
 const bcrypt = require('bcrypt');
 const express = require('express');
 const users = express.Router();
-const User = require('./models/users.js');
+const User = require('../models/users.js');
 
 //ROUTES
 
 //New user sign up
 users.get('/new', (req, res) => {
+    console.log("got the user signup request!")
     res.render('users/new.ejs');
+    console.log('executed the user signup request!')
 });
 
 //Create new user (post route from New User)
@@ -18,4 +20,6 @@ users.post('./', (req, res) => {
         console.log('user is created: ', createdUser);
         res.redirect('/catabase');
     })
-})
+});
+
+module.exports = User;

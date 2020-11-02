@@ -2,10 +2,11 @@
 //Dependencies
 //===================
 const express = require('express');
-require('dotenv').config();
 const session = require('express-session');
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
+
+require('dotenv').config();
 const app = express ();
 const db = mongoose.connection;
 const Catabase = require('./models/catabase.js');
@@ -13,16 +14,16 @@ const Catabase = require('./models/catabase.js');
 //Port
 //===================
 // Allow use of Heroku's port or your own local port, depending on the environment
-const PORT = process.env.PORT //|| 3000;
+const PORT = process.env.PORT || 3000;
 
 //===================
 //Database
 //===================
 // How to connect to the database either via heroku or locally
-const MONGODB_URI = process.env.MONGODB_URI //|| 'mongodb://localhost:27017/'+ `catabase`;
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/'+ `catabase`;
 
 // Connect to Mongo
-mongoose.connect(MONGODB_URI ,  { useNewUrlParser: true}, { useUnifiedTopology: true }, { useFindAndModify: false });
+mongoose.connect(MONGODB_URI,  { useNewUrlParser: true}, { useUnifiedTopology: true }, { useFindAndModify: false });
 
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
@@ -36,6 +37,14 @@ db.on('open' , ()=>{});
 //Middleware
 //===================
 
+//Use express-session:
+// app.use(
+//     session({
+//       secret: process.env.SECRET, //a random string do not copy this value or your stuff will get hacked
+//       resave: false, // default more info: https://www.npmjs.com/package/express-session#resave
+//       saveUninitialized: false // default  more info: https://www.npmjs.com/package/express-session#resave
+//     })
+//   );
 //use public folder for static assets
 app.use(express.static('public'));
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
