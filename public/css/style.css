@@ -48,6 +48,9 @@ body {
 }
 .cat img {
     border-radius: 25px;
+    max-width: 200px;
+    width: 90%;
+    margin-top: 5%;
 }
 .cat:hover {
     transition: all 0.3s;
@@ -71,4 +74,6 @@ body {
 }
 .showCat img {
     border-radius: 25px;
+    max-width: 600px;
+    width: 90%;
 }
