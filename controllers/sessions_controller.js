@@ -24,14 +24,14 @@ sessions.post('/', (req, res) => {
     //Result: "System error, please try again"
 
     User.findOne({username: req.body.username}, (err, foundUser) => {
-        //S4
+        //S4:
         if (err) {
             console.log(err)
             res.send('System error, please try again!')
-        //S2
+        //S2:
         } else if (!foundUser) {
             res.send('<a href="/catabase">Username not found!</a>')
-        //S1 and S3 (username found)
+        //S1 and S3 (username found):
         } else {
             if (bcrypt.compareSync(req.body.password, foundUser.password)) {
                 // if password match, connect user to current session and redirect to index

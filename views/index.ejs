@@ -4,32 +4,8 @@
 </head>
 <body>
     <nav class='navbar'>
-        <div class='title'>
-            <h1>CATABASE!</h1>
-            <h2>The Online Cat Ranking System</h2>
-        </div>
-        <div class='navBtn'>
-            <div class='newCat'>
-                <a href="/catabase/new">
-                    <button class='addACat navBtn'>ADD A CAT</button>
-                </a>
-            </div>
-            <div class='userBox'>
-                <div class='users'>
-                    <a href="/users/new">
-                        <button class='signUp navBtn'>SIGN UP</button>
-                    </a>
-                </div> 
-                <div class='users'>
-                    <a href="/sessions/new">
-                        <button class='signIn navBtn'>LOG IN</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
+        <%- include('./partials/nav.ejs') %> 
     </nav>
-
     <div class='container'>
         <% for (let cat of catabase) { %> 
             <div class=cat>

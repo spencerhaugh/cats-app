@@ -1,0 +1,34 @@
+<div class='title'>
+    <h1>CATABASE!</h1>
+    <h2>The Online Cat Ranking System</h2>
+    <% if (currentUser) { %>
+    <p>Welcome <%= currentUser.username %></p>
+    <% } %>
+</div>
+<div class='navBtn'>
+    <div class='newCat'>
+        <a href="/catabase/new">
+            <button class='addACat navBtn'>ADD A CAT</button>
+        </a>
+    </div>
+    <% if (currentUser) { %>
+        <div class='users logout'>
+            <form action="/sessions/?_method=DELETE" method="POST">
+                <button class="logout navBtn">LOG OUT</button>
+            </form>
+        </div>
+        <% } else { %>
+            <div class='userBox'>
+                <div class='users signup'>
+                    <a href="/users/new">
+                        <button class='signUp navBtn'>SIGN UP</button>
+                    </a>
+                </div> 
+                <div class='users login'>
+                    <a href="/sessions/new">
+                        <button class='signIn navBtn'>LOG IN</button>
+                    </a>
+                </div>
+        <% } %>
+    </div>
+</div>
