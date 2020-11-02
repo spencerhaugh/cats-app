@@ -17,7 +17,7 @@ users.get('/new', (req, res) => {
 users.post('/', (req, res) => {
     console.log('Create user button clicked!');
     // have bcrypt hash the password and overwrite user entry to pass into db
-    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
+    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
     User.create(req.body, (err, createdUser) => {
         console.log('user is created: ', createdUser);
         res.redirect('/catabase');
