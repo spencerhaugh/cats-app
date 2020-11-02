@@ -7,19 +7,21 @@ const User = require('../models/users.js');
 
 //New user sign up
 users.get('/new', (req, res) => {
-    console.log("got the user signup request!")
+    // res.send("New User sign up page")
+    console.log("got the user signup request!");
     res.render('users/new.ejs');
-    console.log('executed the user signup request!')
+    console.log('executed the user signup request!');
 });
 
 //Create new user (post route from New User)
-users.post('./', (req, res) => {
+users.post('/', (req, res) => {
+    console.log('Create user button clicked!');
     // have bcrypt hash the password and overwrite user entry to pass into db
     req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
     User.create(req.body, (err, createdUser) => {
         console.log('user is created: ', createdUser);
         res.redirect('/catabase');
-    })
+    });
 });
 
-module.exports = User;
+module.exports = users;
