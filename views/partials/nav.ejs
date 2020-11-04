@@ -7,9 +7,15 @@
 </div>
 <div class='navBtn'>
     <div class='newCat'>
+        <% if (currentUser) { %>
         <a href="/catabase/new">
             <button class='addACat navBtn'>ADD A CAT</button>
         </a>
+        <% } else { %>
+            <a href="/sessions/new">
+                <button class='addACat navBtn'>ADD A CAT</button>
+            </a>
+            <% } %>
     </div>
     <% if (currentUser) { %>
         <div class='users logout'>

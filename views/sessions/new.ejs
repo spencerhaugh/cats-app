@@ -5,17 +5,29 @@
 <body>
     <h1>LOG IN</h1>
 
-    <form action="/sessions" method="POST">
-        <label for="username">USERNAME:</label>
-            <input type="text" name="username">
-        <label for="password">PASSWORD:</label>
-            <input type="password" name="password">
-        <input type="submit" value="LOG IN">
-    </form>
+    <div class='userForm LogInUser'>
+        <form action="/sessions" method="POST">
+            <label for="username">USERNAME:</label>
+                <input type="text" name="username">
+            <label for="password">PASSWORD:</label>
+                <input type="password" name="password">
+                <button class="login navBtn">LOG IN</button>
+        </form>
+    </div>
+    <div class='userButtons'>
+            <div class='navBtn'>
+                <a href="/catabase">
+                    <button>BACK TO CATS</button>
+                </a>
+            </div>
+            <div class='navBtn'>
+                <a href="/users/new">
+                    <button>CREATE AN ACCOUNT</button>
+                </a>
+            </div>
+    </div>
 
-    <a href="/catabase">
-        <button>Back To Index</button>
-    </a>
     <%- include('../partials/footer.ejs') %> 
+
 </body>
 </html>

@@ -11,15 +11,21 @@
                 <input type="text" name="username">
             <label for="password">PASSWORD:</label>
                 <input type="password" name="password">
-            <div class='navBtn'>
                 <button class="create navBtn">CREATE</button>
-            </div>
         </form>
     </div>
-    <div class='navBtn'>
-        <a href="/catabase">
-            <button class='navBtn backBtn'>Back To Index</button>
-        </a>
+
+    <div class='userButtons'>
+        <div class='navBtn'>
+            <a href="/catabase">
+                <button>BACK TO CATS</button>
+            </a>
+        </div>
+        <div class='navBtn'>
+            <a href="/sessions/new">
+                <button>GO TO LOG IN</button>
+            </a>
+        </div>
     </div>
     <%- include('../partials/footer.ejs') %> 
 </body>
