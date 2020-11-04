@@ -3,21 +3,24 @@
     <%- include('../partials/head.ejs') %> 
 </head>
 <body>
-    <%- include('../partials/nav.ejs') %>
+    <!-- nav?? -->
     <h1>NEW USER</h1>
-    <div class='container'>
+    <div class='userForm newUser'>
         <form action="/users" method="POST">
             <label for="username">USERNAME:</label>
                 <input type="text" name="username">
             <label for="password">PASSWORD:</label>
                 <input type="password" name="password">
-            <input type="submit" value="Create">
+            <div class='navBtn'>
+                <button class="create navBtn">CREATE</button>
+            </div>
         </form>
     </div>
-
-    <a href="/catabase">
-        <button>Back To Index</button>
-    </a>
+    <div class='navBtn'>
+        <a href="/catabase">
+            <button class='navBtn backBtn'>Back To Index</button>
+        </a>
+    </div>
     <%- include('../partials/footer.ejs') %> 
 </body>
 </html>

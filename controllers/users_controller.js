@@ -9,7 +9,9 @@ const User = require('../models/users.js');
 users.get('/new', (req, res) => {
     // res.send("New User sign up page")
     console.log("got the user signup request!");
-    res.render('users/new.ejs');
+    res.render('users/new.ejs'), {
+    currentUser: req.session.currentUser
+    }
     console.log('executed the user signup request!');
 });
 

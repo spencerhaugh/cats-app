@@ -6,6 +6,7 @@
     <nav class='navbar'>
         <%- include('./partials/nav.ejs') %> 
     </nav>
+
     <div class='showContainer'>
         <div class=showCat>
             <img src="<%=cat.img %>" alt="Cat picture">
@@ -15,18 +16,25 @@
             <p>LIKES: <%=cat.likes%></p>
         </div>
     </div>
-    <div class='buttons'>
-        <a href="/catabase/<%=cat._id%>/edit">
-            <button>EDIT THIS CAT</button>
-        </a>
-        <form action="/catabase/<%=cat._id%>?_method=DELETE" method="POST">
-            <input type="submit" value="DELETE THIS CAT">
-        </form>
 
-        <a href="/catabase">
-            <button>Back To Index</button>
-        </a>
+    <div class='showButtons'>
+        <div class='editCat'>
+            <a href="/catabase/<%=cat._id%>/edit">
+                <button class='editBtn'>EDIT THIS CAT</button>
+            </a>
+        </div>
+        <div class="deleteCat">
+            <form action="/catabase/<%=cat._id%>?_method=DELETE" method="POST">
+                <button class='deleteBtn'>DELETE THIS CAT</button>
+        </div>
+            </form>
+        <div class='backBtn'>
+                <a href="/catabase">
+                    <button class='backBtn'>BACK TO CATS</button>
+                </a>
+        </div>
     </div>
+
     <%- include('./partials/footer.ejs') %> 
 </body>
 </html>

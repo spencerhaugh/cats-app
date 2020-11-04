@@ -4,20 +4,23 @@
 </head>
 <body>
     <h1>EDIT CAT HERE!</h1>
-
-    <form action="/catabase/<%=cat._id%>?_method=PUT" method="POST">
-        <label for="name">NAME:</label>
-            <input type="text" name="name" value="<%=cat.name%>">
-        <label for="description">DESCRIPTION:</label>
-            <input type="textarea" name="description" value="<%=cat.description%>">
-        <label for="stars">Star Rating:</label>
-            <input type="range" name="stars" id="" min="1" max="5">
-        <label for="img">IMAGE URL:</label>
-            <input type="text" name="img" value="<%=cat.img%>">
-            <input type="submit" value="submit">
-    </form>
-
-    <a href="/catabase/<%=cat._id%>"><button>BACK</button></a>
+    <div class='editCatForm catForm'>
+        <form action="/catabase/<%=cat._id%>?_method=PUT" method="POST">
+            <label for="name">NAME:</label>
+                <input type="text" name="name" value="<%=cat.name%>">
+            <label for="description">DESCRIPTION:</label>
+                <input type="textarea" name="description" value="<%=cat.description%>">
+            <label for="stars">Star Rating:</label>
+                <input type="range" name="stars" id="" min="1" max="5">
+            <label for="img">IMAGE URL:</label>
+                <input type="text" name="img" value="<%=cat.img%>">
+                <input type="submit" value="submit">
+        </form>
+    </div>
+    <div class='navBtn'>
+        <a href="/catabase/<%=cat._id%>"><button class='backBtn'>BACK</button></a>
+    </div>
+    
     <%- include('./partials/footer.ejs') %> 
 </body>
 </html>

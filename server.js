@@ -78,4 +78,5 @@ app.use('/sessions', sessionsController);
 //===================
 //Listener
 //===================
-app.listen(PORT, () => console.log( 'Listening on port:', PORT));
+app.listen(3000, () => console.log( 'Listening on port:', PORT));
+console.log(process.env.PORT)

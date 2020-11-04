@@ -4,22 +4,27 @@
 </head>
 <body>
     <h1>NEW CAT</h1>
-
-    <form action="/catabase" method="POST">
-        <label for="name">NAME:</label>
-            <input type="text" name="name">
-        <label for="description">DESCRIPTION:</label>
-            <input type="textarea" name="description">
-        <label for="stars">Star Rating:</label>
-            <input type="range" name="stars" id="" min="1" max="5">
-        <label for="img">IMAGE URL:</label>
-            <input type="text" name="img">
-        <input type="submit" value="submit">
-    </form>
-
-    <a href="/catabase">
-        <button>Back To Index</button>
-    </a>
+    <div class='newCatForm catForm'>
+        <form action="/catabase" method="POST">
+            <label for="name">NAME:</label>
+                <input type="text" name="name">
+            <label for="description">DESCRIPTION:</label>
+                <input type="textarea" name="description">
+            <label for="stars">Star Rating:</label>
+                <input type="range" name="stars" id="" min="1" max="5">
+            <label for="img">IMAGE URL:</label>
+                <input type="text" name="img">
+                <div class='navBtn addACat'>
+                    <button class='addACat'>ADD CAT</button>
+                </div>
+        </form>
+    </div>
+    <div class='navBtn'>
+        <a href="/catabase">
+            <button class='backBtn'>BACK TO CATS</button>
+        </a>
+    </div>
+    
     <%- include('./partials/footer.ejs') %> 
 </body>
 </html>

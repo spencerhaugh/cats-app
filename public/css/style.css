@@ -18,6 +18,7 @@ body {
 .title h1 {
     font-size: 4em;
 }
+/* BUTTONS */
 .navBtn {
     margin-right: 20px;
     margin-top: 10px;
@@ -27,10 +28,42 @@ body {
     color: whitesmoke;
     border: none;
     padding: 10px;
-    width: 100px;
+    width: 150px;
 }
 .navBtn button:hover {
     background-color: dodgerblue;
+}
+.showButtons {
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.showButtons button {
+    padding: 15px;
+    border: none;
+    width: 150px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.showButtons .editBtn {
+    background-color: hotpink;
+}
+.showButtons .deleteBtn {
+    background-color: goldenrod;
+}
+.showButtons .backBtn {
+    background-color: blueviolet;
+    width: 150px;
+    margin-left: 5px;
+}
+.navBtn .addACat {
+    background-color: green;
+    width: 150px;
+}
+.navBtn .backBtn {
+    background-color: blueviolet;
+    width: 150px;
 }
 .container {
     width: 82%;
