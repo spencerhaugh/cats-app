@@ -10,9 +10,7 @@ const userSchema = Schema({
     password: {
         type: String,
     },
-    likedCats: {
-        type: [mongoose.ObjectID] 
-    }
+    likedCats: [mongoose.ObjectID],
 });
 
 const User = mongoose.model('User', userSchema);

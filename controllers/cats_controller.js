@@ -68,10 +68,12 @@ catabase.get('/:id', async (req, res) => {
 
 //add like
 catabase.patch('/:id', (req, res) => {
-    Catabase.findByIdAndUpdate(req.params.id, {$inc: {likes: 1}, {new: true}, (err, foundCat) => {
+    console.log('Got a like request!')
+    Catabase.findByIdAndUpdate(req.params.id, {$inc: {likes: +1}}, {new: true}, (err, foundCat) => {
+        console.log('Added the like')
         // User.findByIdAndUpdate
         res.redirect(`${req.params.id}`);
-    }})
+    })
 })
 
 //index

@@ -14,14 +14,16 @@
             <p><%=cat.description%></p>
             <p>Star Rating: <%=cat.stars%></p>
             <p>LIKES: <%=cat.likes%></p>
-            <div id='likeBtn'>
-                <% let thisCat = cat._id %> 
-                <% if (currentUser.likedCats.includes(thisCat) === true) { %>
-                    <button class='liked'>LIKED!</button>
-                <% } else { %>
-                    <form action="/index/<%=cat._id%>?_method=PATCH" method="POST"> 
-                        <button class='likedBtn'>ADD A LIKE!</button>
-                    </form>                
+            <div id='likeBtn navBtn'>
+                <% if (currentUser) { %> 
+                    <% let thisCat = cat._id %> 
+                    <% if (currentUser.likedCats.includes(thisCat) === true) { %>
+                        <button class='liked'>LIKED!</button>
+                    <% } else { %>
+                        <form action="/index/<%=cat._id%>?_method=PATCH" method="POST"> 
+                            <button class='likedBtn'>ADD A LIKE!</button>
+                        </form>                
+                        <% } %>   
                     <% } %>   
 
             </div>
