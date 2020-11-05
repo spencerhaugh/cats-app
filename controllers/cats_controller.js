@@ -1,4 +1,5 @@
 const express = require('express');
+const app = express();
 const Catabase = require('../models/catabase.js');
 const User = require('../models/users.js');
 const catabase = express.Router();
@@ -66,15 +67,28 @@ catabase.get('/:id', async (req, res) => {
     })
 });
 
-//add like
+// ADD LIKES
+
+//assign user to cat
+const userLiked = (req, res, next) => { 
+    let foundCat = Catabase.findById(req.params.id);
+    foundCat.likedBy.push(req.session.currentUser.id, (err, foundCat) => {
+    });
+    next();
+};
+
+app.use(userLiked);
+
+//add like to cat, using userLiked function
 catabase.patch('/:id', (req, res) => {
-    console.log('Got a like request!')
+    console.log('Got a like request!');
+    req.userLiked;
+    console.log('add user to likedBy');
     Catabase.findByIdAndUpdate(req.params.id, {$inc: {likes: +1}}, {new: true}, (err, foundCat) => {
         console.log('Added the like to cat!');
-        // User.findById(currentUser.id).likedCats.push(foundCat.id);
         res.redirect(`${req.params.id}`);
-    })
-})
+    });
+});
 
 //index
 catabase.get('/' , (req, res) => {
