@@ -37,7 +37,7 @@ input {
     width: 150px;
 }
 .navBtn button:hover {
-    /* background-color: dodgerblue; */
+    background-color: dodgerblue;
     opacity: 0.8;
     color: black;
 }
@@ -57,11 +57,9 @@ input {
 .deleteCat button:hover {
     background-color: red;
 }
-.backBtn {
-    background-color: slateblue;
-    width: 150px;
-}
+
 .showButtons button:hover {
+    background-color: dodgerblue;
     color: white;
 }
 .navBtn .addACat {
@@ -91,6 +89,7 @@ input {
 }
 #likeBtn button:hover {
     color: black;
+    background-color: firebrick;
 }
 /* CONTAINERS */
 .container {
