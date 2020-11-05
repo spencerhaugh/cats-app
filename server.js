@@ -78,5 +78,6 @@ app.use('/sessions', sessionsController);
 //===================
 //Listener
 //===================
-app.listen(PORT, () => console.log( 'Listening on port:', PORT));
+// Set to PORT for Heroku, and 3000 for local testing
+app.listen(3000, () => console.log( 'Listening on port:', PORT));
 console.log(process.env.PORT)

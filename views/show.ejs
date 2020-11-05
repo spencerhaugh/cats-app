@@ -18,6 +18,7 @@
     </div>
 
     <div class='showButtons'>
+        <% if (currentUser) { %>
         <div class='editCat'>
             <a href="/catabase/<%=cat._id%>/edit">
                 <button class='editBtn'>EDIT THIS CAT</button>
@@ -28,6 +29,7 @@
                 <button class='deleteBtn'>DELETE THIS CAT</button>
         </div>
             </form>
+            <% } %>
         <div class='backBtn'>
                 <a href="/catabase">
                     <button class='backBtn'>BACK TO CATS</button>
