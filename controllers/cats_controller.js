@@ -83,17 +83,26 @@ app.use(userLiked);
 catabase.patch('/:id', (req, res) => {
     console.log('Got a like request!');
     req.userLiked;
-    console.log('add user to likedBy');
+    console.log('Add UserID to likedBy');
     Catabase.findByIdAndUpdate(req.params.id, {$inc: {likes: +1}}, {new: true}, (err, foundCat) => {
         console.log('Added the like to cat!');
         res.redirect(`${req.params.id}`);
     });
 });
 
+
+// const sortedCats = (req, res, next) => {
+//     Catabase.find({}).sort({likes: -1}), (err, allCats) => {
+
+//     }
+// }
+
 //index
 catabase.get('/' , (req, res) => {
     // Catabase.find({}).sort({likes: -1}), (err, allCats) => {
-    Catabase.find({}, (err, allCats) => {
+    Catabase.find({})
+        .sort({likes: -1}) 
+        .exec((err, allCats) => {
         res.render('index.ejs', { 
             catabase: allCats,
             currentUser: req.session.currentUser 

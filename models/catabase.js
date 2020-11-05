@@ -20,7 +20,8 @@ const catabaseSchema = new Schema({
     likes: {
         type: Number,
         default: 0
-    }
+    },
+    likedBy: []
 });
 
 const Catabase = mongoose.model('Catabase', catabaseSchema);
