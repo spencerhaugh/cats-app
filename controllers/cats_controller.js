@@ -82,9 +82,9 @@ app.use(userLiked);
 //add like to cat, using userLiked function
 catabase.patch('/:id', (req, res) => {
     console.log('Got a like request!');
-    req.userLiked;
-    console.log('Add UserID to likedBy');
-    Catabase.findByIdAndUpdate(req.params.id, {$inc: {likes: +1}}, {new: true}, (err, foundCat) => {
+    // req.userLiked;
+    console.log(req.session.currentUser._id);
+    Catabase.findByIdAndUpdate(req.params.id, {$inc: {likes: +1}, $addToSet: {likedBy: req.session.currentUser._id}}, {new: true}, (err, foundCat) => {
         console.log('Added the like to cat!');
         res.redirect(`${req.params.id}`);
     });
