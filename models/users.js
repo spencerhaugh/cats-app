@@ -9,6 +9,9 @@ const userSchema = Schema({
     },
     password: {
         type: String,
+    },
+    likedCats: {
+        type: [mongoose.ObjectID] 
     }
 });
 

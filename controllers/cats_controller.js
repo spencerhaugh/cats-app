@@ -1,5 +1,6 @@
 const express = require('express');
 const Catabase = require('../models/catabase.js');
+const User = require('../models/users.js');
 const catabase = express.Router();
 
 
@@ -64,6 +65,14 @@ catabase.get('/:id', async (req, res) => {
         })
     })
 });
+
+//add like
+catabase.patch('/:id', (req, res) => {
+    Catabase.findByIdAndUpdate(req.params.id, {$inc: {likes: 1}, {new: true}, (err, foundCat) => {
+        // User.findByIdAndUpdate
+        res.redirect(`${req.params.id}`);
+    }})
+})
 
 //index
 catabase.get('/' , (req, res) => {
