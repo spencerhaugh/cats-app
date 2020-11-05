@@ -20,11 +20,11 @@
                     <% if (currentUser.likedCats.includes(thisCat) === true) { %>
                         <button class='liked'>LIKED!</button>
                     <% } else { %>
-                        <form action="/index/<%=cat._id%>?_method=PATCH" method="POST"> 
+                        <form action="/catabase/<%=cat._id%>?_method=PATCH" method="POST"> 
                             <button class='likedBtn'>ADD A LIKE!</button>
                         </form>                
-                        <% } %>   
                     <% } %>   
+                    <% } %>
 
             </div>
         </div>
