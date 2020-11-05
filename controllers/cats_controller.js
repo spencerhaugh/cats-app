@@ -70,14 +70,15 @@ catabase.get('/:id', async (req, res) => {
 catabase.patch('/:id', (req, res) => {
     console.log('Got a like request!')
     Catabase.findByIdAndUpdate(req.params.id, {$inc: {likes: +1}}, {new: true}, (err, foundCat) => {
-        console.log('Added the like')
-        // User.findByIdAndUpdate
+        console.log('Added the like to cat!');
+        // User.findById(currentUser.id).likedCats.push(foundCat.id);
         res.redirect(`${req.params.id}`);
     })
 })
 
 //index
 catabase.get('/' , (req, res) => {
+    // Catabase.find({}).sort({likes: -1}), (err, allCats) => {
     Catabase.find({}, (err, allCats) => {
         res.render('index.ejs', { 
             catabase: allCats,
