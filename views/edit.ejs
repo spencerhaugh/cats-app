@@ -3,24 +3,30 @@
     <%- include('./partials/head.ejs') %> 
 </head>
 <body>
-    <h1>EDIT CAT HERE!</h1>
-    <div class='editCatForm catForm'>
-        <form action="/catabase/<%=cat._id%>?_method=PUT" method="POST">
-            <label for="name">NAME:</label>
-                <input type="text" name="name" value="<%=cat.name%>">
-            <label for="description">DESCRIPTION:</label>
-                <input type="textarea" name="description" value="<%=cat.description%>">
-            <label for="stars">Star Rating:</label>
-                <input type="range" name="stars" id="" min="1" max="5">
-            <label for="img">IMAGE URL:</label>
-                <input type="text" name="img" value="<%=cat.img%>">
-                <input type="submit" value="submit">
-        </form>
+    <div class='editCatTitle'>
+        <h1>EDIT CAT HERE!</h1>
     </div>
-    <div class='navBtn'>
-        <a href="/catabase/<%=cat._id%>"><button class='backBtn'>BACK</button></a>
+    <div class='editCatContainer'>
+        <div class='editCatForm catForm'>
+            <form action="/catabase/<%=cat._id%>?_method=PUT" method="POST">
+                <label for="name">NAME:</label><br />
+                    <input type="text" name="name" value="<%=cat.name%>"><br />
+                <label for="description">DESCRIPTION:</label><br />
+                    <input type="textarea" name="description" value="<%=cat.description%>"><br />
+                <label for="stars">Star Rating:</label><br />
+                    <input type="range" name="stars" id="" min="1" max="5"><br />
+                <label for="img">IMAGE URL:</label><br />
+                    <input type="text" name="img" value="<%=cat.img%>"><br />
+                    <div class='navBtn'>
+                        <button class='editCatBtn'>EDIT CAT DATA</button>
+                    </div>
+                    
+            </form>
+        </div>
+        <div class='navBtn'>
+            <a href="/catabase/<%=cat._id%>"><button class='backBtn'>BACK</button></a>
+        </div>
     </div>
-    
     <%- include('./partials/footer.ejs') %> 
 </body>
 </html>

@@ -1,11 +1,11 @@
 body {
-    background-color: mediumaquamarine;
+    background-color: burlywood;
     font-family: 'Roboto', sans-serif;
 }
 .navbar {
     display: flex;
     justify-content: space-between;
-    background-color: cadetblue;
+    background-color: chocolate;
     width: 80%;
     margin: 0 auto;
     border-radius: 25px;
@@ -16,7 +16,8 @@ body {
     color: whitesmoke;
 }
 .title h1 {
-    font-size: 4em;
+    font-size: 3em;
+    font-family: 'Press Start 2P', cursive;
 }
 /* FORMS */
 input {
@@ -36,7 +37,9 @@ input {
     width: 150px;
 }
 .navBtn button:hover {
-    background-color: dodgerblue;
+    /* background-color: dodgerblue; */
+    opacity: 0.8;
+    color: black;
 }
 .showButtons {
     display: flex;
@@ -45,32 +48,24 @@ input {
     margin-bottom: 40px;
 }
 .showButtons button {
+    background-color: cornflowerblue;
     padding: 15px;
     border: none;
     width: 150px;
-    margin-left: 5px;
     margin-right: 5px;
 }
-.showButtons .editBtn {
-    background-color: hotpink;
+.deleteCat button:hover {
+    background-color: red;
 }
-.showButtons .deleteBtn {
-    background-color: goldenrod;
-}
-.showButtons .backBtn {
-    background-color: blueviolet;
+.backBtn {
+    background-color: slateblue;
     width: 150px;
-    margin-left: 5px;
 }
 .showButtons button:hover {
     color: white;
 }
 .navBtn .addACat {
-    background-color: green;
-    width: 150px;
-}
-.navBtn .backBtn {
-    background-color: blueviolet;
+    background-color: cornflowerblue;
     width: 150px;
 }
 .userForm button {
@@ -120,7 +115,8 @@ input {
 }
 .cat:hover {
     transition: all 0.3s;
-    background-color: burlywood;
+    background-color: goldenrod;
+    color: white;
 }
 .cat img:hover {
     box-shadow: 0px 2px 5px gray;
@@ -142,4 +138,90 @@ input {
     border-radius: 25px;
     max-width: 600px;
     width: 90%;
+}
+/* NEW USER FORM */
+.newUserContainer {
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: lightgoldenrodyellow;
+}
+.newUserContainer input {
+    margin-bottom: 15px;
+    width: 80%;
+}
+.newUserContainer .create {
+    margin-bottom: 25px;
+}
+.newUserTitle h1 {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+/* LOG IN FORM */
+.logInForm {
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: lightgoldenrodyellow;
+}
+.logInForm input {
+    margin-bottom: 15px;
+    width: 80%;
+}
+.logInForm .logIn {
+    margin-bottom: 25px;
+}
+.logInTitle h1 {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+/* EDIT CAT CONTAINER */
+.editCatContainer {
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: lightgoldenrodyellow;
+}
+.editCatContainer input {
+    margin-bottom: 15px;
+    width: 80%;
+}
+.editCatContainer .editCatBtn {
+    margin-bottom: 25px;
+    background-color: goldenrod;
+}
+.editCatTitle h1 {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+/* NEW CAT CONTAINER */
+.newCatContainer {
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: lightgoldenrodyellow;
+}
+.newCatContainer input {
+    margin-bottom: 15px;
+    width: 80%;
+}
+.newCatContainer .addACatBtn {
+    margin-bottom: 25px;
+    background-color: green;
+}
+.newCatTitle h1 {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }

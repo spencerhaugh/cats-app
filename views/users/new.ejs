@@ -4,27 +4,32 @@
 </head>
 <body>
     <!-- nav?? -->
-    <h1>NEW USER</h1>
-    <div class='userForm newUser'>
-        <form action="/users" method="POST">
-            <label for="username">USERNAME:</label>
-                <input type="text" name="username">
-            <label for="password">PASSWORD:</label>
-                <input type="password" name="password">
-                <button class="create navBtn">CREATE</button>
-        </form>
+    <div class='newUserTitle'>
+        <h1>NEW USER</h1>
     </div>
-
-    <div class='userButtons'>
-        <div class='navBtn'>
-            <a href="/catabase">
-                <button>BACK TO CATS</button>
-            </a>
+    
+    <div class='newUserContainer'>
+        <div class='userForm newUser'>
+            <form action="/users" method="POST">
+                <label for="username">USERNAME:</label>
+                    <input type="text" name="username"><br />
+                <label for="password">PASSWORD:</label>
+                    <input type="password" name="password"><br />
+                    <button class="create navBtn">CREATE</button>
+            </form>
         </div>
-        <div class='navBtn'>
-            <a href="/sessions/new">
-                <button>GO TO LOG IN</button>
-            </a>
+
+        <div class='userButtons'>
+            <div class='navBtn'>
+                <a href="/catabase">
+                    <button>BACK TO CATS</button>
+                </a>
+            </div>
+            <div class='navBtn'>
+                <a href="/sessions/new">
+                    <button>GO TO LOG IN</button>
+                </a>
+            </div>
         </div>
     </div>
     <%- include('../partials/footer.ejs') %> 

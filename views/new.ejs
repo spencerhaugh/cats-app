@@ -3,28 +3,31 @@
     <%- include('./partials/head.ejs') %> 
 </head>
 <body>
-    <h1>NEW CAT</h1>
-    <div class='newCatForm catForm'>
-        <form action="/catabase" method="POST">
-            <label for="name">NAME:</label>
-                <input type="text" name="name">
-            <label for="description">DESCRIPTION:</label>
-                <input type="textarea" name="description">
-            <label for="stars">Star Rating:</label>
-                <input type="range" name="stars" id="" min="1" max="5">
-            <label for="img">IMAGE URL:</label>
-                <input type="text" name="img">
-                <div class='navBtn addACat'>
-                    <button class='addACat'>ADD CAT</button>
-                </div>
-        </form>
+    <div class='newCatTitle'>
+        <h1>NEW CAT</h1>
     </div>
-    <div class='navBtn'>
-        <a href="/catabase">
-            <button class='backBtn'>BACK TO CATS</button>
-        </a>
-    </div>
-    
+    <div class='newCatContainer'>
+        <div class='newCatForm catForm'>
+            <form action="/catabase" method="POST">
+                <label for="name">NAME:</label><br />
+                    <input type="text" name="name"><br />
+                <label for="description">DESCRIPTION:</label><br />
+                    <input type="textarea" name="description"><br />
+                <label for="stars">Star Rating:</label><br />
+                    <input type="range" name="stars" id="" min="1" max="5"><br />
+                <label for="img">IMAGE URL:</label><br />
+                    <input type="text" name="img"><br />
+                    <div class='navBtn addACat'>
+                        <button class='addACatBtn'>ADD CAT</button>
+                    </div>
+            </form>
+        </div>
+        <div class='navBtn'>
+            <a href="/catabase">
+                <button class='backBtn'>BACK TO CATS</button>
+            </a>
+        </div>
+    </div>    
     <%- include('./partials/footer.ejs') %> 
 </body>
 </html>

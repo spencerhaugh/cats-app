@@ -3,30 +3,33 @@
     <%- include('../partials/head.ejs') %> 
 </head>
 <body>
-    <h1>LOG IN</h1>
-
-    <div class='userForm LogInUser'>
-        <form action="/sessions" method="POST">
-            <label for="username">USERNAME:</label>
-                <input type="text" name="username">
-            <label for="password">PASSWORD:</label>
-                <input type="password" name="password">
-                <button class="login navBtn">LOG IN</button>
-        </form>
+    <div class='logInTitle'>
+        <h1>LOG IN</h1>
     </div>
-    <div class='userButtons'>
-            <div class='navBtn'>
-                <a href="/catabase">
-                    <button>BACK TO CATS</button>
-                </a>
-            </div>
-            <div class='navBtn'>
-                <a href="/users/new">
-                    <button>CREATE AN ACCOUNT</button>
-                </a>
-            </div>
+    
+    <div class='logInForm'>
+        <div class='userForm LogInUser'>
+            <form action="/sessions" method="POST">
+                <label for="username">USERNAME:</label>
+                    <input type="text" name="username"><br />
+                <label for="password">PASSWORD:</label>
+                    <input type="password" name="password"><br />
+                    <button class="logIn navBtn">LOG IN</button>
+            </form>
+        </div>
+        <div class='userButtons'>
+                <div class='navBtn'>
+                    <a href="/catabase">
+                        <button>BACK TO CATS</button>
+                    </a>
+                </div>
+                <div class='navBtn'>
+                    <a href="/users/new">
+                        <button>CREATE AN ACCOUNT</button>
+                    </a>
+                </div>
+        </div>
     </div>
-
     <%- include('../partials/footer.ejs') %> 
 
 </body>
