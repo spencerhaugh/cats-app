@@ -1,2 +1,36 @@
-# cats-app
-Project Two General Assembly SEI-9-21
+# Catabase!
+## Project 2: SEI 9-21
+
+This app tracks a user-uploaded database of cats, and allows users to rank the cats. Users that are logged in can add new cats, edit cats, delete cats, and "like" cats.
+
+LINK:
+[Catabase App](https://enigmatic-island-67697.herokuapp.com/catabase)
+
+Feature List:
+
+* Cats are displayed on the index page in decending order of total likes.
+* Users must be logged in to add, edit, delete, or like cats.
+* Once a user has liked a cats, they can not like it again.
+* Username is displayed in the title area of the header when logged in.
+* Fully responsive
+* Interactive UI, all buttons and cats have hover effects and visual effects
+
+## Summary
+
+I wwanted to make an app that looked great, and that people would be drawn in to interacting with. I settled on ranking cats because, well, the internet loves cats! I think the concept is one that the general public could easily become enamoured with.
+
+## Technologies used:
+
+This app was build on a Mongo database, which has schemas for both users and cats. It utilizes Express and Nodejs, with Mongoose to interface with the database, to create the stack for this interactive site. User passwords are encrypted using bcrypt.
+
+## Challenges
+
+The most difficult parts of this app was getting the connection between the cat model and user model correct, so that when clicking the "like" button, the user was associated with the cat, and the cats like count incremented by 1. Figuring out how to accomplish two things on one click was more than I anticipated. 
+
+I would still like to update the app further to retrict cat editing/deleting to only the user that created it. I think now that I finally have the like button working, that it wouldn't be too much of a stretch to implement that feature.
+
+The other item on my wish list that I did not have time to look into was image upload. I think moving beyond the Image URL input is crucial for this app to move beyond 'class project' and into viable for public use. I honestly do not know how hard that would be to add, or if it's even viable using MongoDB. Something to look into!
+
+## Original Wireframe
+
+![Wireframe image](/images/CatabaseInitialWireframe.png)
