@@ -14,14 +14,20 @@ Feature List:
 * Username is displayed in the title area of the header when logged in.
 * Fully responsive
 * Interactive UI, all buttons and cats have hover effects and visual effects
+* Non-logged in users attempting to Create are directed to the login page.
 
 ## Summary
 
 I wwanted to make an app that looked great, and that people would be drawn in to interacting with. I settled on ranking cats because, well, the internet loves cats! I think the concept is one that the general public could easily become enamoured with.
 
-## Technologies used:
+## Technologies used
 
-This app was build on a Mongo database, which has schemas for both users and cats. It utilizes Express and Nodejs, with Mongoose to interface with the database, to create the stack for this interactive site. User passwords are encrypted using bcrypt.
+This app was build on a Mongo database, which has schemas for both users and cats. It utilizes Express and Nodejs, with Mongoose to interface with the database, to create the stack for this interactive site. User passwords are encrypted using bcrypt. The RESTful routes adhere to the MVC file structure.
+
+App users have access to full CRUD, while non-logged in users can browse all pages, but can not create, edit, or delete. I initially added Skeleton CSS framework, but I actually felt like I had less control over what I was trying to do with the site, so I ended up coding all the CSS on my own.
+I was also able to implement EJS partials for my navbar and header.
+
+This app has been deployed online via Heroku, and is available to the public at the link above.
 
 ## Challenges
 
