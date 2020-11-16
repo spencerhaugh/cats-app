@@ -258,4 +258,13 @@ input {
         margin: 0 auto;
         text-align: center;
     }
+    .showButtons button {
+        width: 100px;
+    }
+    .navBtn .addACat {
+        width: 100px;
+    }
+    .userForm button {
+        width: 100px;
+    }
 }
