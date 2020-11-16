@@ -267,4 +267,24 @@ input {
     .userForm button {
         width: 100px;
     }
+    .logInForm {
+        width: 50%;
+    }
+    .userForm {
+        width: 50%;
+    }
+    .userForm input {
+        margin-top: 5px;
+        width: 100px;
+    }
+    .newUserContainer {
+        width: 50%;
+    }
+    .newUserContainer input {
+        margin-top: 5px;
+        width: 100px;
+    }
+    button {
+        width: 100px;
+    }
 }
