@@ -21,6 +21,10 @@ const catabaseSchema = new Schema({
         type: Number,
         default: 0
     },
+    createdBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    },
     likedBy: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"

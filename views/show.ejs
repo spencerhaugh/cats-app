@@ -12,8 +12,14 @@
             <img src="<%=cat.img %>" alt="Cat picture">
             <h3><%=cat.name%></h3>
             <p><%=cat.description%></p>
-            <p>Star Rating: <%=cat.stars%></p>
-            <p>LIKES: <%=cat.likes%></p>
+            <% for (let i = 1; i <= 5; i++) { %>
+                <% if (cat.stars <= i) { %>
+                    <span class='unfilledStar'>&star;</span>
+                <% } else { %>
+                    <span class='filledStar'>&starf;</span>
+                <% }} %>    
+            <!-- <p>Star Rating: <%= cat.stars%></p> -->
+            <p>LIKES: <%=cat.likes%> &hearts;</p>
             <div id='likeBtn'>
                 <% if (currentUser) { %> 
                     <% if (cat.likedBy.includes(currentUser._id) === true) { %>
@@ -31,6 +37,7 @@
 
     <div class='showButtons'>
         <% if (currentUser) { %>
+            <% if (cat.createdBy === currentUser._id) { %>
         <div class='editCat'>
             <a href="/catabase/<%=cat._id%>/edit">
                 <button class='editBtn'>EDIT THIS CAT</button>
@@ -41,7 +48,7 @@
                 <button class='deleteBtn'>DELETE THIS CAT</button>
         </div>
             </form>
-            <% } %>
+            <% }} %>
         <div class='backBtn'>
                 <a href="/catabase">
                     <button class='backBtn'>BACK TO CATS</button>

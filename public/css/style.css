@@ -23,6 +23,15 @@ body {
 input {
     padding: 8px;
 }
+/* STARS */
+.filledStar {
+    font-size: 1.5em;
+    color: gold;
+}
+.unfilledStar {
+    font-size: 1.5em;
+    opacity: 0.5;
+}
 
 /* BUTTONS */
 .navBtn {
@@ -236,5 +245,17 @@ input {
         padding: 6px;
         width: 120px;
         margin-top: 5px;
+    }
+}
+@media (max-width: 476px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .navBtn {
+        margin: 5px auto;
+    }
+    .title {
+        margin: 0 auto;
+        text-align: center;
     }
 }
