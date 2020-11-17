@@ -287,4 +287,12 @@ input {
     button {
         width: 100px;
     }
+    .newCatContainer {
+        width: 50%;
+    }
+    .newUserContainer input {
+        margin-top: 5px;
+        width: 100px;
+    }
+
 }

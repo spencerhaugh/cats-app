@@ -12,14 +12,14 @@
             <img src="<%=cat.img %>" alt="Cat picture">
             <h3><%=cat.name%></h3>
             <p><%=cat.description%></p>
-            <% for (let i = 1; i <= 5; i++) { %>
+            <% for (let i = 1; i <= 4; i++) { %>
                 <% if (cat.stars <= i) { %>
                     <span class='unfilledStar'>&star;</span>
                 <% } else { %>
                     <span class='filledStar'>&starf;</span>
                 <% }} %>    
             <!-- <p>Star Rating: <%= cat.stars%></p> -->
-            <p>LIKES: <%=cat.likes%> &hearts;</p>
+            <p><i class="em em-heart" aria-role="presentation" aria-label="HEAVY BLACK HEART"></i> <%=cat.likes%> </p>
             <div id='likeBtn'>
                 <% if (currentUser) { %> 
                     <% if (cat.likedBy.includes(currentUser._id) === true) { %>
