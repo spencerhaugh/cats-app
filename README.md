@@ -1,11 +1,13 @@
 # Catabase!
-## Project 2: SEI 9-21
+## Project 2: Software Engineering Immersive 9-21
 
-After 6 weeks of study, came Project 2! Project 2 was another solo project, to be deployed to Heroku, and using Node.js and Express intergrated with a MongoDB database & Mongoose. This project required us to utilize MVC conventions, as well as implementing authentication (via bCrypt). This app is rendered sever-side, and was focused on building our back-end.
+After 6 weeks of study, came Project 2! 
+
+Project 2 was another solo project, to be deployed to Heroku, and using Node.js and Express intergrated with a MongoDB database & Mongoose. This project required us to utilize MVC conventions, as well as implementing authentication (via bCrypt). This app is rendered sever-side, and was focused on building our back-end.
 
 I created a full CRUD RESTful app that tracks a user-uploaded database of cats, and allows users to rank the cats with "likes". Users that are logged in can add new cats, edit cats, delete cats, and "like" cats.
 
-LINK:
+HEROKU DEPLOYMENT LINK:
 [Catabase App](https://enigmatic-island-67697.herokuapp.com/catabase)
 
 Feature List:
@@ -31,7 +33,7 @@ I was also able to implement EJS partials for my navbar and header.
 
 This app has been deployed online via Heroku, and is available to the public at the link above.
 
-## Challenges
+## Challenges & Improvements
 
 The most difficult parts of this app was getting the connection between the cat model and user model correct, so that when clicking the "like" button, the user was associated with the cat, and the cats like count incremented by 1. Figuring out how to accomplish two things on one click was more than I anticipated. 
 
