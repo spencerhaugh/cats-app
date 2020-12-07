@@ -3,7 +3,7 @@
 
 After 6 weeks of study, came Project 2! 
 
-Project 2 was another solo project, to be deployed to Heroku, and using Node.js and Express intergrated with a MongoDB database & Mongoose. This project required us to utilize MVC conventions, as well as implementing authentication (via bCrypt). This app is rendered sever-side, and was focused on building our back-end.
+Project 2 was another solo project, to be deployed to Heroku and using Node.js & Express intergrated with a MongoDB database & Mongoose. This project required us to utilize MVC conventions, as well as implementing authentication (via bCrypt). This app is rendered sever-side, and was focused on building our back-end.
 
 I created a full CRUD RESTful app that tracks a user-uploaded database of cats, and allows users to rank the cats with "likes". Users that are logged in can add new cats, edit cats, delete cats, and "like" cats.
 
