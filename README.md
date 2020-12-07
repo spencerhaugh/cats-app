@@ -1,7 +1,9 @@
 # Catabase!
 ## Project 2: SEI 9-21
 
-This app tracks a user-uploaded database of cats, and allows users to rank the cats. Users that are logged in can add new cats, edit cats, delete cats, and "like" cats.
+After 6 weeks of study, came Project 2! Project 2 was another solo project, to be deployed to Heroku, and using Node.js and Express intergrated with a MongoDB database & Mongoose. This project required us to utilize MVC conventions, as well as implementing authentication (via bCrypt). This app is rendered sever-side, and was focused on building our back-end.
+
+I created a full CRUD RESTful app that tracks a user-uploaded database of cats, and allows users to rank the cats with "likes". Users that are logged in can add new cats, edit cats, delete cats, and "like" cats.
 
 LINK:
 [Catabase App](https://enigmatic-island-67697.herokuapp.com/catabase)
@@ -18,7 +20,7 @@ Feature List:
 
 ## Summary
 
-I wwanted to make an app that looked great, and that people would be drawn in to interacting with. I settled on ranking cats because, well, the internet loves cats! I think the concept is one that the general public could easily become enamoured with.
+I wanted to make an app that looked great, and that people would be drawn in to interacting with. I settled on ranking cats because, well, the internet loves cats! I think the concept is one that the general public could easily become enamoured with.
 
 ## Technologies used
 
@@ -35,7 +37,7 @@ The most difficult parts of this app was getting the connection between the cat 
 
 I would still like to update the app further to retrict cat editing/deleting to only the user that created it. I think now that I finally have the like button working, that it wouldn't be too much of a stretch to implement that feature.
 
-The other item on my wish list that I did not have time to look into was image upload. I think moving beyond the Image URL input is crucial for this app to move beyond 'class project' and into viable for public use. I honestly do not know how hard that would be to add, or if it's even viable using MongoDB. Something to look into!
+The other item on my wish list that I did not have time to research/implement was image upload. I think moving beyond the Image URL input is crucial for this app to move beyond 'class project' and into a viable for public use. I honestly do not know how hard that would be to add, or if it's even viable using MongoDB. Something to look into!
 
 ## Original Wireframe
 
